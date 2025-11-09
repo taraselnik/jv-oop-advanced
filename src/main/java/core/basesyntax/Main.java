@@ -8,12 +8,15 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < AMOUNT_OF_FIGURERS; i++) {
-            if (i <= AMOUNT_OF_FIGURERS / 2) {
+            if (i < AMOUNT_OF_FIGURERS / 2) {
                 randomFigures[i] = figureSupplier.getRandomFigure();
             } else {
                 randomFigures[i] = figureSupplier.getDefaultFigure();
             }
-            randomFigures[i].draw();
+        }
+
+        for (Figure figure: randomFigures) {
+            figure.draw();
         }
     }
 }
