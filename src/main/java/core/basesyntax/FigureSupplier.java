@@ -16,12 +16,11 @@ public class FigureSupplier {
         double value2 = rand.nextDouble() * MAX_RANDOM_NUMBER;
         double value3 = rand.nextDouble() * MAX_RANDOM_NUMBER;
         return switch (choice) {
-            case 0 -> new Circle(randColor, value1);
             case 1 -> new IsoscelesTrapezoid(randColor, value1, value2, value3);
             case 2 -> new Rectangle(randColor, value1, value2);
             case 3 -> new RightTriangle(randColor, value1, value2);
             case 4 -> new Square(randColor, value1);
-            default -> null;
+            default -> new Circle(randColor, value1);
         };
     }
 
